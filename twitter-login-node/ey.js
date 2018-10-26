@@ -19,7 +19,7 @@ const mc = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'nodedb'
+    database: 'pd_db'
 });
 
 // connect to database
@@ -31,10 +31,10 @@ app.get('/', function (req, res) {
 });
 
 // Retrieve all todos
-app.get('/todos', function (req, res) {
-    mc.query('SELECT * FROM tasks', function (error, results, fields) {
+app.get('/Test_Sessions', function (req, res) {
+    mc.query('SELECT * FROM Test_Session', function (error, results, fields) {
         if (error) throw error;
-        return res.send({ error: false, data: results, message: 'Todos list.' });
+        return res.send({ error: false, data: results, message: 'Test_Session' });
     });
 });
 
