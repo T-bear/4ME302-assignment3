@@ -7,7 +7,7 @@
 $(document).ready(function(){
     $("button").click(function(){
         //Here is where the URL for the api is impleneted
-        $.getJSON("http://x00.se:1980/todos", function(result){
+        $.getJSON("http://x00.se:1980/test_sessions", function(result){
             $.each(result, function(i, field){
                 //Here we set that the result from the above dunction is injected in a div with ID demo. To be able for a user to understand the data we stringify it.
                 document.getElementById("demo").innerHTML = JSON.stringify(result);
