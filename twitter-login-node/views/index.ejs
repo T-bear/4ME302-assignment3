@@ -6,7 +6,7 @@
     <a href="/auth/google">Sign In with Google</a>
     <a href="role1.ejs">link text</a>	
     </div>
-<% } else if (<%= user.role === 1 %>) { %>
+<% } else if (user.role === 1 ) { %>
     <h2>Hello, <%= user.username %>.</h2>
     <h2>role 1</h2>
 <% }else {%>
